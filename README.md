@@ -20,8 +20,6 @@ The first thing I did was merge the ‘recipes’ and ‘interactions’ data fr
 Replacing the zeros with NaN for the ‘rating’ column is so then any calculations done with ‘rating’ column values (for example the mean) doesn’t affect the overall statistic. In the context of the recipes data, a rating of zero could mean there was no rating left at all, except a review. One specific example of this is from the food.com website where a user wrote “it is easy.”, but left no rating. A recipe being easy is not necessarily a bad thing and one could guess that the rating would be at least or higher, but instead, it’s safer to input NaN into the dataset. 
 
 After this step, I calculated the average rating based on each unique recipe, and then added these values into the merged data frame, corresponding to the correct recipe ID. 
-
-NEED TO INSERT GRAPH FROM NOTEBOOK
 <iframe
   src="assets/dist_of_cal.html"
   width="800"
@@ -32,7 +30,7 @@ The graph above is the distribution of calories for each recipe where the highes
 
 NEED TO INSERT GRPAH FROM NOTEBOOK
 <iframe
-  src="assets/cals_vs_sugar.html"
+  src="assets/dist_of_cal.html"
   width="800"
   height="600"
   frameborder="0"
@@ -40,7 +38,6 @@ NEED TO INSERT GRPAH FROM NOTEBOOK
 The scatter plot above is the relationship between the Percent of Daily Fat and number of calories for each recipe(represented by each data point). From this graph, there is a positive relationship between the two variables, i.e. as the PDV of fat increases, typically the number of calories also increases. However, there are other confounding factors such as specific ingredients and other nutrients.
 
 The table below shows essentially what we can infer about what we know about food. Looking at the PDV of fat and PDV of sugar, as these variables increase, the number calories increases and is thus ranked about healthy or unhealthy. This ultimately is going to be taken into account when analyzed with the recipe ratings.
-NEED TO INSERT TABLE FROM NOTEBOOK
 <iframe
   src="assets/healthy_stats.html"
   width="800"
@@ -52,7 +49,6 @@ NEED TO INSERT TABLE FROM NOTEBOOK
 Of the dataset I’m working on, there are three columns with missing data. These columns are 'name', 'description', and 'average_rating'. Of these three columns, I believe that the ‘average_rating’ column could be classified as NMAR (depends on the actual missing value), since the rating could be 0, meaning the recipe hasn’t been made. For data cleaning, I made all ratings of 0 to be np.NaN. 
 I could look at the ‘name’ or ‘description’ columns to see if the ‘average_rating’ column’s missing data is dependent on these columns. This would mean better descriptions and recipe names would attract more attention and thus more reviews. 
 
-NEED TO INSERT GRAPH FROM NOTEBOOK
 <iframe
   src="assets/Name Length vs Average Rating.html"
   width="800"
