@@ -22,19 +22,43 @@ Replacing the zeros with NaN for the ‘rating’ column is so then any calculat
 After this step, I calculated the average rating based on each unique recipe, and then added these values into the merged data frame, corresponding to the correct recipe ID. 
 
 NEED TO INSERT GRAPH FROM NOTEBOOK
+<iframe
+  src="assets/dist_of_cal.html"
+  width="800"
+  height="600"
+  frameborder="0"
+></iframe>
 The graph above is the distribution of calories for each recipe where the highest percentage of recipes (~38%) has a range of 100-300(exclusive) calories. Most of the recipes are within 100-700 calories, which can range from serving size. Serving size is most likely the cause for the calorie outliers.
 
 NEED TO INSERT GRPAH FROM NOTEBOOK
+<iframe
+  src="assets/cals_vs_fat.html"
+  width="800"
+  height="600"
+  frameborder="0"
+></iframe>
 The scatter plot above is the relationship between the Percent of Daily Fat and number of calories for each recipe(represented by each data point). From this graph, there is a positive relationship between the two variables, i.e. as the PDV of fat increases, typically the number of calories also increases. However, there are other confounding factors such as specific ingredients and other nutrients.
 
 The table below shows essentially what we can infer about what we know about food. Looking at the PDV of fat and PDV of sugar, as these variables increase, the number calories increases and is thus ranked about healthy or unhealthy. This ultimately is going to be taken into account when analyzed with the recipe ratings.
 NEED TO INSERT TABLE FROM NOTEBOOK
+<iframe
+  src="assets/healthy_stats.html"
+  width="800"
+  height="600"
+  frameborder="0"
+></iframe>
 
 # Assessment of Missingness
 Of the dataset I’m working on, there are three columns with missing data. These columns are 'name', 'description', and 'average_rating'. Of these three columns, I believe that the ‘average_rating’ column could be classified as NMAR (depends on the actual missing value), since the rating could be 0, meaning the recipe hasn’t been made. For data cleaning, I made all ratings of 0 to be np.NaN. 
 I could look at the ‘name’ or ‘description’ columns to see if the ‘average_rating’ column’s missing data is dependent on these columns. This would mean better descriptions and recipe names would attract more attention and thus more reviews. 
 
 NEED TO INSERT GRAPH FROM NOTEBOOK
+<iframe
+  src="assets/Name Length vs Average Rating.html"
+  width="800"
+  height="600"
+  frameborder="0"
+></iframe>
 This graph is the distribution of ‘name_length’ when ‘average_rating’ is missing (red) and the distribution of ‘name_length’ when ‘average_rating’ is not missing (green). As shown above, the distributions are extremely different, as is the number of recipes that are missing versus not missing in regards to the length of the recipe name. My previous hypothesis that longer recipe titles result in non-missing ratings is found to be false. 
 
 # Hypothesis Testing
