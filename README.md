@@ -28,7 +28,6 @@ After this step, I calculated the average rating based on each unique recipe, an
 ></iframe>
 The graph above is the distribution of calories for each recipe where the highest percentage of recipes (~38%) has a range of 100-300(exclusive) calories. Most of the recipes are within 100-700 calories, which can range from serving size. Serving size is most likely the cause for the calorie outliers.
 
-NEED TO INSERT GRPAH FROM NOTEBOOK
 <iframe
   src="assets2/cal_vs_fat.html"
   width="800"
@@ -39,7 +38,7 @@ The scatter plot above is the relationship between the Percent of Daily Fat and 
 
 The table below shows essentially what we can infer about what we know about food. Looking at the PDV of fat and PDV of sugar, as these variables increase, the number calories increases and is thus ranked about healthy or unhealthy. This ultimately is going to be taken into account when analyzed with the recipe ratings.
 <iframe
-  src="assets/healthy_stats.html"
+  src="assets2/healthy_stats.md"
   width="800"
   height="600"
   frameborder="0"
