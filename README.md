@@ -32,7 +32,7 @@ The graph above is the distribution of calories for each recipe where the highes
 
 NEED TO INSERT GRPAH FROM NOTEBOOK
 <iframe
-  src="assets/cals_vs_fat.html"
+  src="assets/cals_vs_sugar.html"
   width="800"
   height="600"
   frameborder="0"
