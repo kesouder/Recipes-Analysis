@@ -23,7 +23,7 @@ After this step, I calculated the average rating based on each unique recipe, an
 <iframe
   src="assets/dist_of_cal.html"
   width="800"
-  height="600"
+  height="400"
   frameborder="0"
 ></iframe>
 The graph above is the distribution of calories for each recipe where the highest percentage of recipes (~38%) has a range of 100-300(exclusive) calories. Most of the recipes are within 100-700 calories, which can range from serving size. Serving size is most likely the cause for the calorie outliers.
@@ -31,7 +31,7 @@ The graph above is the distribution of calories for each recipe where the highes
 <iframe
   src="assets2/cal_vs_fat.html"
   width="800"
-  height="600"
+  height="400"
   frameborder="0"
 ></iframe>
 The scatter plot above is the relationship between the Percent of Daily Fat and number of calories for each recipe(represented by each data point). From this graph, there is a positive relationship between the two variables, i.e. as the PDV of fat increases, typically the number of calories also increases. However, there are other confounding factors such as specific ingredients and other nutrients.
@@ -40,7 +40,7 @@ The table below shows essentially what we can infer about what we know about foo
 <iframe
   src="assets2/healthy_stats.md"
   width="800"
-  height="600"
+  height="400"
   frameborder="0"
 ></iframe>
 
@@ -51,7 +51,7 @@ I could look at the ‘name’ or ‘description’ columns to see if the ‘ave
 <iframe
   src="assets/Name Length vs Average Rating.html"
   width="800"
-  height="600"
+  height="400"
   frameborder="0"
 ></iframe>
 This graph is the distribution of ‘name_length’ when ‘average_rating’ is missing (red) and the distribution of ‘name_length’ when ‘average_rating’ is not missing (green). As shown above, the distributions are extremely different, as is the number of recipes that are missing versus not missing in regards to the length of the recipe name. My previous hypothesis that longer recipe titles result in non-missing ratings is found to be false. 
