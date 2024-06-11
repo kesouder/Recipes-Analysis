@@ -84,7 +84,7 @@ Null Hypothesis: My final model is fair. The RMSE difference is the same between
 Alternative Hypothesis: My final model is not fair. The RMSE difference is significantly different between the healthy and unhealthy groups.
 My hypothesis was tested with a test statistic of 0.05. My resulting p-value was 0.006, meaning the difference between RMSE was significant and thus I reject the null hypothesis. My model is not fair since there is a significant difference between the two groups and the number of steps for the recipes, meaning the prediction of calories is not fair.
 <iframe
-  src="assets/dist_fairness.html"
+  src="assets2/dist_fairness.html"
   width="800"
   height="430"
   frameborder="0"
