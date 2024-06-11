@@ -75,6 +75,17 @@ For my final model, I took what I learned from my baseline model and added more 
 
 I chose to use a Decision Tree Regressor. With this, I chose to use GridSearchCV to find the best hyperparameters for my model. The best hyperparameters were a Decision Tree max depth 7 and minimum sample split 2.
 In my ColumnTransformer classifier object, I used a Function Transformer to apply a log function to the ‘minutes’ column. I used PolynomialFeatures() for the ‘n_ingredients’ column. I used StandardScalar() for 'n_ingredients', 'sugar_pdv', and 'fat_pdv' columns since the relationship is not linear, this will change the model's error. Instead of using LinearRegression(), I used the DecisionTreeRegressor() with a max depth of 7, since it was the best choice for this hyperparameter and the default split value of 2.
-This model has improved significantly from the baseline model. The final model included a more indepth engineering model such as the DecisionTreeRegressor() classifier as well as the hyperparameters that yielded the best R2. The baseline models R2 was extremely low, 0.04 at the maximum, versus the final models R2, being 0.75. 
+This model has improved significantly from the baseline model. The final model included a more indepth engineering model such as the DecisionTreeRegressor() classifier as well as the hyperparameters that yielded the best R2. The baseline models R2 was extremely low, 0.04 at the maximum, versus the final models R2, being ~0.75. 
 
 # Fairness Analysis
+For my two groups, I chose to use the ‘n_steps’ column to determine if data belonged to the long group or the short group, using a Binarizer threshold of 10, based on the ‘n_steps’ mean, mode, and median. Using the ‘n_steps’ column, it uses a column that doesn’t directly affect the prediction of calories. 
+My evaluation metric was the difference in RMSE of the two groups.
+Null Hypothesis: My final model is fair. The RMSE difference is the same between the healthy and unhealthy groups. Any observed difference is due to random chance.
+Alternative Hypothesis: My final model is not fair. The RMSE difference is significantly different between the healthy and unhealthy groups.
+My hypothesis was tested with a test statistic of 0.05. My resulting p-value was 0.006, meaning the difference between RMSE was significant and thus I reject the null hypothesis. My model is not fair since there is a significant difference between the two groups and the number of steps for the recipes, meaning the prediction of calories is not fair.
+<iframe
+  src="assets/dist_fairness.html"
+  width="800"
+  height="430"
+  frameborder="0"
+></iframe>
