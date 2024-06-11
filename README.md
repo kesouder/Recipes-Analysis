@@ -1,4 +1,5 @@
-# Calories in Recipes -- Analysis
+# Happy Recipes
+### Calories in Recipes -- Analysis
 Final Project for DSC80 at UCSD - 2024
 
 # Introduction
@@ -6,11 +7,14 @@ The data set used for the final project is from the food.com website, which incl
 
 This question is particularly interesting since it relates to user preferences and trends (like keto or veganism). This can better help the food industry, whether that be websites, apps etc, better understand their consumers and suggest better recipe suggestions. Like most online websites that track patterns and suggest things consumers want, it’s not different with food and food recipes.
 The number of rows in the data set I’ll be working on is 234429 with relevant column names being:
-{‘name’: The recipe name
+	```
+{
+‘name’: The recipe name
 ‘id’: Unique recipe id number
-nutrition: Nutrition information in the form [calories (#), total fat (PDV), sugar (PDV), sodium (PDV), protein (PDV), saturated fat (PDV), carbohydrates (PDV)] where PDV stands for “percentage of daily value”
+‘nutrition‘: Nutrition information in the form [calories (#), total fat (PDV), sugar (PDV), sodium (PDV), protein (PDV), saturated fat (PDV), carbohydrates (PDV)] where PDV stands for “percentage of daily value”
 ‘rating_avg’: The average rating for each recipe
-}	
+}
+```
 
 # Data Cleaning and Exploratory Analysis
 The first thing I did was merge the ‘recipes’ and ‘interactions’ data frames together based on the unique recipe ID, so there would be rating data corresponding to each recipe. This is necessary for computing any kind of analysis on the recipe ratings in general and referring back to the recipes themselves.
@@ -64,7 +68,7 @@ I want to predict the number of calories of a recipe using regression analysis. 
 
 # Baseline Model
 My model will use the ‘minutes’ and ‘n_ingredients’ column of the data frame to predict the ‘cals’ variable. The features I’m using in my model are ‘n_ingredients’ which is the number of ingredients for each recipe, and ‘minutes’ which is the amount of time it takes to prepare the recipe. Both variables are quantitative. I’ve transformed the ‘minutes’ column using the log function because I wanted to make more accurate predictions with minutes and the number of calories in a recipe. I’ve transformed the ‘n_ingredients’ column with the PolynomialFeature() method because I figured there was not a linear relationship between calories and the number of ingredients.
-The performance of this model is not very thorough or accurate. I believe this model is not good because it only used two variables that were both quantitative. Since I’m trying to predict the number of calories per recipe, I should also consider other values from the 'mutrients' column, not just how many ingredients and the recipe’s cooking time.
+The performance of this model is not very thorough or accurate. I believe this model is not good because it only used two variables that were both quantitative. Since I’m trying to predict the number of calories per recipe, I should also consider other values from the 'nutrition' column, not just how many ingredients and the recipe’s cooking time.
 
 
 # Final Model
