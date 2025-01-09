@@ -2,6 +2,8 @@
 ### Calories in Recipes -- Analysis
 Final Project for DSC80 at UCSD - 2024
 
+https://kesouder.github.io/Recipes-Analysis/
+
 # Introduction
 The data set used for the final project is from the food.com website, which include recipes, its ingredients, stats, and user input (reviews and ratings). This project explores the question of what types of recipes have more or less calories.
 
